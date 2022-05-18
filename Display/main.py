@@ -22,7 +22,7 @@ class Infouni:
     def __init__(self, cf):
         self.universityInfo = Frame(cf, pady=10, padx=10)
         self.universityInfo.grid(row=0, column=0, sticky='senw')
-        self.img = Image.open('Image/university.png')
+        self.img = Image.open('university.png')
         self.img.thumbnail((200, 200))
         self.new_img = ImageTk.PhotoImage(self.img)
         self.imgUniversity = Label(self.universityInfo, image=self.new_img, padx=10, pady=10)
@@ -40,7 +40,7 @@ class Staff:
     def __init__(self, cf):
         self.staffFrame = Frame(cf, pady=10, padx=10)
         self.staffFrame.grid(row=0, column=2, sticky='senw')
-        self.img3 = Image.open('Image/staff.png')
+        self.img3 = Image.open('staff.png')
         self.img3.thumbnail((200, 200))
         self.new_img3 = ImageTk.PhotoImage(self.img3)
         self.imgStaff = Label(self.staffFrame, image=self.new_img3, padx=10, pady=10)
@@ -57,7 +57,7 @@ class Student:
     def __init__(self,cf):
         self.studentFrame = Frame(cf, pady=10, padx=10)
         self.studentFrame.grid(row=0, column=1, sticky='senw')
-        self.img2 = Image.open('Image/studenticon.png')
+        self.img2 = Image.open('studenticon.png')
         self.img2.thumbnail((200, 200))
         self.new_img2 = ImageTk.PhotoImage(self.img2)
         self.imgStudent = Label(self.studentFrame, image=self.new_img2, padx=10, pady=10)
@@ -75,7 +75,7 @@ class Library:
     def __init__(self,bf):
         self.libraryFrame = Frame(bf, pady=10, padx=50)
         self.libraryFrame.grid(row=1, column=0, sticky='senw')
-        self.img4 = Image.open('Image/open-book.png')
+        self.img4 = Image.open('open-book.png')
         self.img4.thumbnail((200, 200))
         self.new_img4 = ImageTk.PhotoImage(self.img4)
         self.imgLibrary = Label(self.libraryFrame, image=self.new_img4, padx=10, pady=10)
@@ -88,22 +88,22 @@ class Library:
         pass
         # lib = LibraryWindow()
 
-# class Exam:
-#     def __init__(self,bf):
-#         self.examFrame = Frame(bf, pady=10, padx=50)
-#         self.examFrame.grid(row=1, column=1, sticky='senw')
-#         self.img5 = Image.open('Image/exam.png')
-#         self.img5.thumbnail((200, 200))
-#         self.new_img5 = ImageTk.PhotoImage(self.img5)
-#         self.imgExam = Label(self.examFrame, image=self.new_img5, padx=10, pady=10)
-#         self.imgExam.pack()
-#         self.buttonExam = Button(self.examFrame, command=self.openExamWindow, font=('tahoma', 10, 'bold'),
-#                                  text='Exam Management', bg='#1b9ea4', fg='white', padx=10, pady=10)
-#         self.buttonExam.pack()
-#
-#     def openExamWindow(self):
-#         pass
-#         # lib = ExamWindow()
+class Exam:
+    def __init__(self,bf):
+        self.examFrame = Frame(bf, pady=10, padx=50)
+        self.examFrame.grid(row=1, column=1, sticky='senw')
+        self.img5 = Image.open('exam.png')
+        self.img5.thumbnail((200, 200))
+        self.new_img5 = ImageTk.PhotoImage(self.img5)
+        self.imgExam = Label(self.examFrame, image=self.new_img5, padx=10, pady=10)
+        self.imgExam.pack()
+        self.buttonExam = Button(self.examFrame, command=self.openExamWindow, font=('tahoma', 10, 'bold'),
+                                 text='Exam Management', bg='#1b9ea4', fg='white', padx=10, pady=10)
+        self.buttonExam.pack()
+
+    def openExamWindow(self):
+        pass
+        # lib = ExamWindow()
 
 class University:
     def __init__(self, window):
@@ -142,7 +142,7 @@ class University:
         ####### Library Frame ######
         lib = Library(self.bottomFrame)
         ######### Exam Frame ########
-        # exa = Exam(self.bottomFrame)
+        exa = Exam(self.bottomFrame)
         ################# Bottom Frame End Here ########################
         self.centerFrame.grid_columnconfigure(0, weight=1)
         self.centerFrame.grid_columnconfigure(1, weight=1)
