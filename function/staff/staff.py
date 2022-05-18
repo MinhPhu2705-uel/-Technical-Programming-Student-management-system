@@ -12,7 +12,7 @@ class Staff:
     def __init__(self, cf):
         self.staffFrame = Frame(cf, pady=10, padx=10)
         self.staffFrame.grid(row=0, column=2, sticky='senw')
-        self.img3 = Image.open('Img/staff.png')
+        self.img3 = Image.open('Image/staff.png')
         self.img3.thumbnail((200, 200))
         self.new_img3 = ImageTk.PhotoImage(self.img3)
         self.imgStaff = Label(self.staffFrame, image=self.new_img3, padx=10, pady=10)
