@@ -13,7 +13,7 @@ from pymongo import*
 from tkcalendar import*
 import re
 
-mongo_client = MongoClient()
+mongo_client = MongoClient("mongodb+srv://minhphu2705:<password>@universitymanagement.ywgcv.mongodb.net/test")
 db = mongo_client["University"]
 cols = db["Exam"]
 

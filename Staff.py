@@ -8,7 +8,7 @@ from pymongo import*
 import re
 
   
-mongo_client = MongoClient()
+mongo_client = MongoClient('mongodb+srv://minhphu2705:<password>@universitymanagementtoo.ob26c.mongodb.net/test')
 db = mongo_client["University"]
 cols = db["Staff"]
 
