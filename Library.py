@@ -10,7 +10,7 @@ from tkcalendar import Calendar
 from datetime import date, datetime
 from pymongo import*
 
-mongo_client = MongoClient("mongodb+srv://minhphu2705:<password>@universitymanagement.ywgcv.mongodb.net/test")
+mongo_client = MongoClient('localhost:27017')
 db = mongo_client["University"]
 cols = db["Library"]
 

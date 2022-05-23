@@ -9,9 +9,9 @@ from PIL import ImageTk
 import re
 
 
-mongo_client = MongoClient("mongodb+srv://minhphu2705:<password>@universitymanagementtoo.ob26c.mongodb.net/test")
-db = mongo_client["University"]
-cols = db["Student"]
+mongo_client = MongoClient('localhost:27017')
+db = mongo_client.get_database('University')
+cols = db.Student
 
 
 
